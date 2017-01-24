@@ -4,6 +4,94 @@ Assignment_1
 Venesh
 Instructors-Venkatesh,Phani.
 
+Downloading tools
+
+There are many downloading tools like snarf, pavuk, fget, fetch, lftp, aria2, HTTrack,wget and curl.
+
+Despite all these tools we mostly use curl and wget. Because they offer more services than other.
+
+WGET
+
+wget is more popular than curl. It is easy to use. Does not need any options like -o -O to be given.
+NO library.
+Non-Interactive command line. It is easily used in automating jobs like shells and crontabs.
+It also works in Windows. 
+
+sachin@sachins:~/practice$ wget https://github.com
+--2017-01-24 14:38:27--  https://github.com/
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘index.html’
+
+index.html              [ <=>                  ]  25.00K  --.-KB/s   in 0.06s  
+
+2017-01-24 14:38:28 (388 KB/s) - ‘index.html’ saved [25601]
+// It downloaded the index.html page as https://github.com logs into index page of the website.
+
+sachin@sachins:~/practice$ ls
+index.html
+
+//Now, my URL is https://github.com/explore
+ 
+sachin@sachins:~/practice$ wget https://github.com/explore
+--2017-01-24 14:41:16--  https://github.com/explore
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+
+Length: unspecified [text/html]
+Saving to: ‘explore’
+
+explore                 [  <=>                 ] 175.85K   764KB/s   in 0.2s   
+
+2017-01-24 14:41:17 (764 KB/s) - ‘explore’ saved [180072]
+
+sachin@sachins:~/practice$ ls
+explore  index.html
+//you can see explore page is downloaded.
+
+
+sachin@sachins:~/practice$ wget https://eenadu.net
+--2017-01-24 13:43:57--  https://eenadu.net/
+Resolving eenadu.net (eenadu.net)... 115.114.110.249
+Connecting to eenadu.net (eenadu.net)|115.114.110.249|:443... failed: Connection timed out.
+Retrying.
+//you can see I tried to download from eendau.net. It failed to do so.
+without my interference it is retrying.
+
+--2017-01-24 13:46:05--  (try: 2)  https://eenadu.net/
+Connecting to eenadu.net (eenadu.net)|115.114.110.249|:443... 
+
+// this is the best part of the wget.
+
+
+CURL
+
+curl supports big bunch of protocols unlike wget.
+It has library and offers Many functions with options. 
+
+sachin@sachins~$ curl https://github.com
+
+//it downloaded me all the source code in the terminal
+I copied the the source and pasted it in a empty html page.
+When I opened the saved html page, it redirected me to same index page.
+It is same as the page downloaded by the wget.
+
+sachin@sachins:~/practice$ ls
+explore  indexcurl.html  indexcurl.html~  index.html
+
+sachin@sachins:~/practice$ curl http://jayapachallu.com https://github.com
+
+// multiple URLs in single command line 
+// multiple http protocols like http and https at at time 
+
+sachin@sachins:~/practice$ curl -u venesh31:123456 https://github.com
+
+//curl is also used to login, but now a days this not accepted by websites.
+
+
+
 ADDing and ReMoving Users
 
 sachin@sachins:~$ sudo useradd -m /bin/bash ganguly
