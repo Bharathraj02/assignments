@@ -1,0 +1,236 @@
+
+HYR GLOBAL SOURCE
+Assignment_1
+Venesh
+Instructors-Venkatesh,Phani.
+
+ADDing and ReMoving Users
+
+sachin@sachins:~$ sudo useradd -m /bin/bash ganguly
+
+//sudo useradd userdel and usermod are the old version commands. While, Using useradd we need to add parameter "-m" to create the home folder.
+
+sachin@sachins:/home$ ls
+ganguly  sachin
+sachin@sachins:/home$ ls
+ganguly  sachin
+
+// As -m  is used with useradd, ganguly folder is created in the home. 
+ 
+sachin@sachins:~$ sudo adduser sehwag
+Adding user `sehwag' ...
+Adding new group `sehwag' (1001) ...
+Adding new user `sehwag' (1001) with group `sehwag' ...
+Creating home directory `/home/sehwag' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+
+sachin@sachins:~$ cd /
+sachin@sachins:/$ cd home
+sachin@sachins:/home$ ls
+ganguly  sachin  sehwag
+
+/*sudo adduser sehwag
+so using adduser, I did not give any parameters to create a home folder. Although it created the home folder in home named after sehwag.
+*/
+
+Deleting a user 
+
+sachin@sachins:~$ sudo deluser ganguly
+[sudo] password for sachin: 
+Removing user `ganguly' ...
+Warning: group `ganguly' has no more members.
+Done.
+
+ 
+CHOWN
+
+I have a file called "Assignmenet" in the home folder of sachin.
+Being user, sachin I want to change the owner of the owner of the Assignment.
+
+sachin@sachins:~$ ls -l
+total 61840
+-rw-rw-r-- 1 sachin sachin      907 Jan 23 23:39 Assignment
+
+sachin is still the owner of the file Assignment, now I have to change the owner to sehwag. I have to use CHOWN.
+
+sachin@sachins:~$ sudo chown sehwag Assignment
+sachin@sachins:~$ ls -l
+total 61840
+-rw-rw-r-- 1 sehwag sachin      907 Jan 23 23:39 Assignment
+
+You can see the owner has been changed to sehwag from the sachin.
+So, now sehwag is the owner of the Assignment
+
+
+CHMOD
+
+sachin@saechins:~$ ls -l
+drwxr-xr-x 2 sachin sachin     4096 Jan 21 03:11 Documents
+
+/* sachin being the owner of the folder "Documents", other users in the group and others can still read and execute the files in the folder. So, As the documents is the important folder I want it to be only rwx by me. */
+
+sachin@sachins:~$ sudo chmod  700 Documents
+
+drwx------ 2 sachin sachin     4096 Jan 21 03:11 Documents
+
+// All the permissions of groups and others are denied using chmod.
+
+sudo chmod 777 Documents
+
+drwxrwxrwx 2 sachin sachin     4096 Jan 21 03:11 Documents
+// Gives all  permissions to User,Group, Others with 777.
+
+r = 4
+w = 2
+x = 1
+r+w+x = 7.
+
+After changing the permissions color of the folder changes into green.
+
+
+Blue: Directory
+Green: Executable or recognized data file
+Sky Blue: Linked file
+Yellow with black background: Device
+Pink: Graphic image file
+Red: Archive file
+
+
+sachin@sachins:~$ sudo chmod 111 Documents
+sachin@sachins:~$ ls -l
+d--x--x--x 2 sachin sachin     4096 Jan 21 03:11 Documents
+// 111 gives the UGO to only execute the files.
+
+
+sachin@sachins:~$ sudo chmod 722 Documents
+sachin@sachins:~$ ls -l
+drwx-w--w- 2 sachin sachin     4096 Jan 21 03:11 Documents
+// 722 gives the rwx for U, only for both G and O.
+
+
+CHGRP
+
+sachin@sachins:~$ groups
+sachin adm cdrom sudo dip plugdev lpadmin sambashare
+//sachin current groups are listed above.
+
+
+sachin@sachins:~$ groups sehwag
+sehwag : sehwag
+////Sehwag belongs to only his group.
+
+sachin@sachins:~$ groups sachin
+sachin : sachin adm cdrom sudo dip plugdev lpadmin sambashare
+//sachin belongs to all the groups listed above.
+
+sachin@sachins~$ sudo su 
+root@sachins:/# groupadd cricket
+//created a new group called cricket
+
+Adding sachin to this newly created group cricket
+
+sachin@sachins~$ usermod -aG cricket sachin
+where,
+-G, --groups GROUPS new list of supplementary GROUPS
+-a, --append append the user to the supplemental GROUPS
+
+sachin@sachins:/$ groups sachin
+sachin : sachin adm cdrom sudo dip plugdev lpadmin sambashare cricket
+
+//Now sachin added in to the group cricket
+
+
+//Although we create a group, it will not show until we add atleast a user to it.
+
+sachin@sachins:/$ sudo usermod -G cricket sachin
+
+// this command is used to assign the user to group given and removing from all other groups(secondary groups).
+
+sachin@sachins:/$ groups sachin
+sachin : sachin cricket
+
+// Earlier User sachin was in all the groups like dev,cdrom etc now he is  in his own group sachin and given group cricket
+
+sachin@sachins:/$ gpasswd --help
+Usage: gpasswd [option] GROUP
+
+Options:
+  -a, --add USER                add USER to GROUP
+  -d, --delete USER             remove USER from GROUP
+
+Removing User from group
+
+sachin@sachins:/$ groups sachin
+sachin : sachin cricket opener
+//sachin is in 3 groups
+
+sachin@sachins:/$ sudo gpasswd -d sachin cricket
+Removing user sachin from group cricket
+//removed sachin from cricket
+
+sachin@sachins:/$ groups sachin
+sachin : sachin opener
+//sachin is still in the other secondary group opener
+
+RENAME is not same as MV
+
+MV is used to change the name of the single file
+
+sachin@sachins:~$ ls
+Assignment        Pictures
+//lets rename the Assignment to Assignment_1
+
+sachin@sachins:~$ mv Assignment Assignment_1
+sachin@sachins:~$ ls
+Assignment_1       Pictures
+
+// it is renamed
+
+
+
+RENAME
+Rename is used to change the multiple file names at a time.
+It uses perl expressions. 
+
+
+sachin@sachins:~$ mkdir rename
+sachin@sachins:~$ cd rename
+// now I created a folder rename
+
+sachin@sachins:~/rename$ touch venkatesh phani karthik venesh
+// creating four files with lower case alphabets(a-z).
+
+sachin@sachins:~/rename$ ls
+karthik  phani  venesh  venkatesh
+// files created
+
+command to rename the file names from lower case to upper case.
+
+sachin@sachins:~/rename$ rename 'y/a-z/A-Z/' *
+// above command is to change the file names from lower to upper
+
+sachin@sachins:~/rename$ ls
+KARTHIK  PHANI  VENESH  VENKATESH
+//yes, they are created
+
+command to remove the spaces in between.
+rename 's/_//' *
+
+sachin@sachins:~/rename$ touch karthik_chinnaganta venesh_bathula
+// creating the files with spaces i.e underscores in between
+
+sachin@sachins:~/rename$ ls
+KARTHIK  karthik_chinnaganta  PHANI  VENESH  venesh_bathula  VENKATESH
+//files created
+
+renaming spaces by removing spaces
+
+sachin@sachins:~/rename$ rename 's/_//' *
+
+sachin@sachins:~/rename$ ls
+KARTHIK  karthikchinnaganta  PHANI  VENESH  veneshbathula  VENKATESH
+//spaces are removed creating new file names.
+
+
