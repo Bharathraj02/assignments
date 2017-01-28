@@ -1,0 +1,294 @@
+    1  nano /etc/apt/sources.list
+    2  sudo nano /etc/apt/sources.list
+    3  wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add 
+    4  wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add - 
+    5  wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+    6  sudo apt-get update
+    7  sudo apt-get install virtualbox
+    8  virtualbox 
+    9  sudo apt-get update
+   10  sudo apt-get upgrade
+   11  virtualbox
+   12  sudo apt-get install build-essential module-assistant
+   13  sudo m-a prepare
+   14  sudo /etc/init.d/vboxdrv setup
+   15  virtualbox
+   16  cd /tmp/
+   17  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v3.16-utopic/linux-headers-3.16.0-031600-generic_3.16.0-031600.201408031935_amd64.deb
+   18  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v3.16-utopic/linux-headers-3.16.0-031600_3.16.0-031600.201408031935_all.deb
+   19  wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v3.16-utopic/linux-image-3.16.0-031600-generic_3.16.0-031600.201408031935_amd64.deb
+   20  sudo dpkg -i linux-headers-3.16.0-*.deb linux-image-3.16.0-*.deb
+   21  reboot
+   22  sudo m-a prepare
+   23  sudo /etc/init.d/vboxdrv setup
+   24  virtualbox
+   25  sudo apt-get purge virtualbox
+   26  wget http://download.virtualbox.org/virtualbox/5.0.2/virtualbox-5.0_5.0.2-102096~Ubuntu~trusty_amd64.deb
+   27  sudo dpkg -i virtualbox-5.0_5.0.2-102096~Ubuntu~trusty_amd64.deb
+   28  sudo apt-get install -f
+   29  virtualbox
+   30  sudo apt-get update
+   31  virtualbox
+   32  sudo apt-get --reinstall install virtualbox-dkms
+   33  sudo apt-get --force install virtualbox-dkms
+   34  virtualbox
+   35  sudo apt-get install build-essential libssl-dev linux-headers-`uname -r`
+   36  sudo apt-get install dkms
+   37  sudo -i
+   38  aptitude purge virtualbox virtualbox-dkms virtualbox-qt
+   39  sudo aptitude purge virtualbox virtualbox-dkms virtualbox-qt
+   40  sudo apt-get purge virtualbox virtualbox-dkms virtualbox-qt
+   41  aptitude install virtualbox
+   42  sudo aptitude install virtualbox
+   43  sudo apt-get install virtualbox
+   44  sudo chusr sehwag
+   45  sudo chuser sehwag
+   46  sudo add user sehwag
+   47  sudo add usr sehwag
+   48  sudo addusr sehwag
+   49  sudo create usr sehwag
+   50  sudo create user sehwag
+   51  sudo user add  sehwag
+   52  sudo usr add  sehwag
+   53  sudo chusr add  sehwag
+   54  sudo chmod add  sehwag
+   55  sudo chmod sehwag
+   56  man chmod
+   57  sudo passwd sehwag
+   58  ls
+   59  chown sehwag Desktop
+   60  sudo chown sehwag Desktop
+   61  ls -al
+   62  cd ~/Downloads/
+   63  ls
+   64  cd-
+   65  cd -
+   66  la
+   67  cd~/
+   68  cd ~/Downloads/
+   69  cd ..
+   70  la
+   71  ls
+   72  suso apt-get install virtualbox-5.0_5.0.2-102096~Ubuntu~trusty_amd64.deb
+   73  sudo apt-get install virtualbox-5.0_5.0.2-102096~Ubuntu~trusty_amd64.deb
+   74  ls -ali
+   75  sudo su sehwag
+   76  sudo deluser sehwag
+   77  sudo adduser /home/user sehwag
+   78  sudo adduser -m -s /bin/bash ganguly
+   79  sudo useradd -m  -s /bin/bash ganguly
+   80  sudo passwd
+   81  cd /home/users
+   82  cd /home/user
+   83  cd home
+   84  l
+   85  s
+   86  ls
+   87  cd ?
+   88  cd/
+   89  c d/
+   90  cd 
+   91  cd /
+   92  ls
+   93  cd home
+   94  ls
+   95  sudo su ganguly
+   96  sudo passwd ganguly
+   97  sudo su root
+   98  mail -s sachin tendulkarvenesh@gmail.com
+   99  sudo deluser ganguly
+  100  clear
+  101  sudo useradd -m /bin/bash ganguly
+  102  cd home 
+  103  cd /
+  104  cd home
+  105  ls
+  106  cd ..
+  107  sudo userdel ganguly
+  108  sudo userdel -m ganguly
+  109  sudo deluser ganguly
+  110  cd ~
+  111  sudo deluser ganguly
+  112  cd /
+  113  ls 
+  114  cd home
+  115  ls
+  116  sudo deluser ganguly
+  117  cd ..
+  118  sudo adduser /bin/bash sehwag
+  119  cd ~
+  120  sudo adduser /bin/bash sehwag
+  121  ls -ls /bin
+  122  ls -l /bin|*sh
+  123  ls -l /bin /*sh
+  124  chmod 755 / 
+  125  sudo chmod 755 / 
+  126  sudo adduser /bin/bash sehwag
+  127  sudo adduser sehwag
+  128  cd /
+  129  cd home
+  130  ls
+  131  cd ~
+  132  ls
+  133  ls -al
+  134  ls -l
+  135  chown sehwag Assignment 
+  136  sudo chown sehwag Assignment 
+  137  ls l
+  138  ls -l
+  139  sudo chmod  700 Documents
+  140  ls -l
+  141  ls -l ?
+  142  ls -l /Desktop
+  143  ls -l /Document
+  144  ls -l /home/sachin/Document
+  145  ls -l /home/sachin/Documents
+  146  ls -l /Documents
+  147  ls -l
+  148  sudo chmod 777 Documents
+  149  ls -l
+  150  sudo chmod 111 Documents
+  151  ls -l
+  152  sudo chmod 722 Documents
+  153  ls -l
+  154  groups
+  155  sudo apt-get update
+  156  sudo apt-get upgrade firefox
+  157  sudo apt-get purge virtualbox
+  158  sudo deluser ganguly
+  159  users
+  160  groups
+  161  cd home 
+  162  cd /
+  163  ls 
+  164  cd home
+  165  ls
+  166  sudo deluser ganguly
+  167  cd -
+  168  ls
+  169  cd usr
+  170  cd sbin
+  171  cd deluser
+  172  ls
+  173  sudo userdel ganguly
+  174  rename --help
+  175  cd ..
+  176  cd ~
+  177  ls
+  178  rename Assigment Assignmentone
+  179  rename Assignment Assignmentone
+  180  rename Assigment Assignmentone
+  181  rename Assingment Assignmentone
+  182  rename -m
+  183  id -Gn sehwag
+  184  groups sehwag
+  185  groups sachin
+  186  groups ganguly
+  187  sudo adduser ganguly 
+  188  cd /
+  189  ls 
+  190  cd home
+  191  ls
+  192  cd ganguly
+  193  ls
+  194  groups ganguly
+  195  newgrp cricket
+  196  addgrp cricket
+  197  grpadd cricket
+  198  sudo su 
+  199  groups
+  200  c d/
+  201  cd ..
+  202  ls
+  203  groups
+  204  usermod -aG cricket sachin
+  205  sudo usermod -aG cricket sachin
+  206  groups sachin
+  207  usermod --help
+  208  usermod -R cricket sachin
+  209  usermod -G cricket sachin
+  210  sudo usermod -G cricket sachin
+  211  groups sachin
+  212  sudo su
+  213  groups
+  214  usermod -aG opener sachin
+  215  sudo usermod -aG opener sachin
+  216  groups sachin
+  217  gpasswd --help
+  218  sudo gpasswd -d opener sachin
+  219  sudo gpasswd -d sachin opener
+  220  sudo passwd -d sachin cricket
+  221  sudo gpasswd -d sachin cricket
+  222  usermod -aG cricket sachin
+  223  sudo usermod -aG cricket sachin
+  224  sudo usermod -aG opener sachin
+  225  groups sachin
+  226  sudo gpasswd -d sachin cricket
+  227  groups sachin
+  228  rename --help
+  229  ls
+  230  cd ~
+  231  ls
+  232  ls -al
+  233  sudo chmod 700 Assignment
+  234  rename Assignment Assignment_1
+  235  mkdir rename
+  236  cd rename
+  237  touch venkatesh phani karthik venesh
+  238  ls
+  239  rename 'y/a-z/A-Z/' *
+  240  ls
+  241  cd ..
+  242  sudo chmod 777 Assignment
+  243  mv Assignment Assignment_1
+  244  ls
+  245  mv Assignment_1 Assignment
+  246* 
+  247  cd rename
+  248  ls
+  249  nano sachin
+  250  ls
+  251  rename s'/_//' *
+  252  ls
+  253  rename 's/_//' *
+  254  ls
+  255  rename 's//_/' *
+  256  ls
+  257  rename 's///' *
+  258  ls
+  259  rename 's/_//' *
+  260  ls
+  261  rename 's///_/' *
+  262  rename 's//_/' *
+  263  ls
+  264  rename 's/_//' *
+  265  ls
+  266  mv sachin ganguly sachin ganguly.txt
+  267  rm sachin ganguly
+  268  rm sachin_ganguly
+  269  ls
+  270  re -rf sahin ganguly
+  271  rm -rf sahin ganguly
+  272  rm -rf sachin ganguly
+  273  ls
+  274  remove sachin ganguly
+  275  rm ./sachin ganguly
+  276  rm ./-sachin ganguly
+  277  rm -rf "sachin ganguly"
+  278  ls
+  279  touch sachin_ganguly
+  280  rm -rf sachin_ganguly 
+  281  touch karthik_chinnaganta venesh_bathula
+  282  ls
+  283  rename 's/_//' *
+  284  ls
+  285  ame 's/_//' *
+  286  sachin@sachins:~/rename$ ls
+  287  KARTHIK  karthikchinnaganta  PHANI  VENESH  veneshbathula  VENKATESH
+  288  //spaces are removed creating new file names.
+  289  history 
+  290  sudo apt-get --force install virtualbox-dkms
+  291  cd ..
+  292  ls
+  293  history
+  294  history > Assignment_1_commands
