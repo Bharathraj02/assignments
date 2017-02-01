@@ -1,16 +1,16 @@
 
-sachin@cricket:~/assignments$ git init
+1.sachin@cricket:~/assignments$ git init
 Reinitialized existing Git repository in /home/sachin/assignments/.git/
 
 
 
-sachin@cricket:~/assignments$ git config --global user.name venesh31
+2.sachin@cricket:~/assignments$ git config --global user.name venesh31
 
-sachin@cricket:~/assignments$ git config --global user.email veneshbathula@gmail.com
+3.sachin@cricket:~/assignments$ git config --global user.email veneshbathula@gmail.com
 
 
 
-sachin@cricket:~/assignments$ git log
+4.sachin@cricket:~/assignments$ git log
 
 commit 8d618148c7402799d96c02b217a8663f3c0c36dc
 Author: venesh31 <veneshbathula@gmail.com>
@@ -35,7 +35,7 @@ commit db288a1111467e92f29c9e18e6158a0f9129691a
 Author: = <=>
 Date:   Sat Jan 28 14:15:17 2017 -0600
 
-sachin@cricket:~/assignments$ git show
+5.sachin@cricket:~/assignments$ git show
 
 commit 8d618148c7402799d96c02b217a8663f3c0c36dc
 Author: venesh31 <veneshbathula@gmail.com>
@@ -49,10 +49,47 @@ index 0000000..1ea4731
 Binary files /dev/null and b/Assignment 1_25_2017.pdf differ
 
 
-sachin@cricket:~/assignments$ git clone https://github.com/venesh31/Mytest1
+6.sachin@cricket:~/assignments$ git clone https://github.com/venesh31/Mytest1git 
 Cloning into 'Mytest1'...
 remote: Counting objects: 13, done.
 remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 13
 Unpacking objects: 100% (13/13), done.
 Checking connectivity... done.
 sachin@cricket:~/assignments$ 
+
+
+7.sachin@cricket:~/assignments$ git add Assignment_01_29_2017 
+8.sachin@cricket:~/assignments$ git commit -m "git commands"
+[master ecece37] git commands
+ 3 files changed, 61 insertions(+), 1 deletion(-)
+ create mode 100644 Assignment_01_29_2017
+ create mode 100644 test
+9.sachin@cricket:~/assignments$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Assignment 1_25_2017
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Mytest1/
+	Untitled 1.odt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+10.sachin@cricket:~/assignments$ git push origin master 
+Username for 'https://github.com': venesh31
+Password for 'https://venesh31@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.04 KiB | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/venesh31/assignments
+   8d61814..ecece37  master -> master
+
+ 
+
