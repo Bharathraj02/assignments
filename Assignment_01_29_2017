@@ -1,0 +1,58 @@
+
+sachin@cricket:~/assignments$ git init
+Reinitialized existing Git repository in /home/sachin/assignments/.git/
+
+
+
+sachin@cricket:~/assignments$ git config --global user.name venesh31
+
+sachin@cricket:~/assignments$ git config --global user.email veneshbathula@gmail.com
+
+
+
+sachin@cricket:~/assignments$ git log
+
+commit 8d618148c7402799d96c02b217a8663f3c0c36dc
+Author: venesh31 <veneshbathula@gmail.com>
+Date:   Sun Jan 29 00:06:16 2017 -0600
+
+    telnet,ping,dig,ifconfig,du,df,lsof,trace,free,nc,scp,netstat
+
+commit 3aa29b2fb097d2e81fa47956b30f94e95979db15
+Author: venesh31 <veneshbathula@gmail.com>
+Date:   Sat Jan 28 23:50:38 2017 -0600
+
+    telnet,ping,dig,ifconfig,du,df,lsof,trace,free,nc,scp,netstat
+
+commit 9c716323e9367b1825b855e559e588575828858b
+Merge: db288a1 3accaa8
+Author: = <=>
+Date:   Sat Jan 28 14:21:26 2017 -0600
+
+    Merge branch 'master' of https://github.com/venesh31/assignments
+
+commit db288a1111467e92f29c9e18e6158a0f9129691a
+Author: = <=>
+Date:   Sat Jan 28 14:15:17 2017 -0600
+
+sachin@cricket:~/assignments$ git show
+
+commit 8d618148c7402799d96c02b217a8663f3c0c36dc
+Author: venesh31 <veneshbathula@gmail.com>
+Date:   Sun Jan 29 00:06:16 2017 -0600
+
+    telnet,ping,dig,ifconfig,du,df,lsof,trace,free,nc,scp,netstat
+
+diff --git a/Assignment 1_25_2017.pdf b/Assignment 1_25_2017.pdf
+new file mode 100644
+index 0000000..1ea4731
+Binary files /dev/null and b/Assignment 1_25_2017.pdf differ
+
+
+sachin@cricket:~/assignments$ git clone https://github.com/venesh31/Mytest1
+Cloning into 'Mytest1'...
+remote: Counting objects: 13, done.
+remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 13
+Unpacking objects: 100% (13/13), done.
+Checking connectivity... done.
+sachin@cricket:~/assignments$ 
