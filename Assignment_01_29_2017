@@ -1,17 +1,18 @@
 
 1.sachin@cricket:~/assignments$ git init
+//Intialize the git on premises repository
 Reinitialized existing Git repository in /home/sachin/assignments/.git/
 
 
 
 2.sachin@cricket:~/assignments$ git config --global user.name venesh31
-
+// configuring the git with our local repository
 3.sachin@cricket:~/assignments$ git config --global user.email veneshbathula@gmail.com
 
 
 
 4.sachin@cricket:~/assignments$ git log
-
+//shows the last commits
 commit 8d618148c7402799d96c02b217a8663f3c0c36dc
 Author: venesh31 <veneshbathula@gmail.com>
 Date:   Sun Jan 29 00:06:16 2017 -0600
@@ -36,7 +37,7 @@ Author: = <=>
 Date:   Sat Jan 28 14:15:17 2017 -0600
 
 5.sachin@cricket:~/assignments$ git show
-
+//shows the last commit 
 commit 8d618148c7402799d96c02b217a8663f3c0c36dc
 Author: venesh31 <veneshbathula@gmail.com>
 Date:   Sun Jan 29 00:06:16 2017 -0600
@@ -59,12 +60,16 @@ sachin@cricket:~/assignments$
 
 
 7.sachin@cricket:~/assignments$ git add Assignment_01_29_2017 
+//adds the files to git
+
 8.sachin@cricket:~/assignments$ git commit -m "git commands"
+//git commit commits the file into staging
 [master ecece37] git commands
  3 files changed, 61 insertions(+), 1 deletion(-)
  create mode 100644 Assignment_01_29_2017
  create mode 100644 test
 9.sachin@cricket:~/assignments$ git status
+//status the shows the files in staging
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -79,7 +84,9 @@ Untracked files:
 	Untitled 1.odt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+
 10.sachin@cricket:~/assignments$ git push origin master 
+//git push pushes the files into git
 Username for 'https://github.com': venesh31
 Password for 'https://venesh31@github.com': 
 Counting objects: 5, done.
@@ -90,6 +97,61 @@ Total 5 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/venesh31/assignments
    8d61814..ecece37  master -> master
+
+11.sachin@cricket:~/assignments$ git push -u origin master
+Username for 'https://github.com': venesh31
+Password for 'https://venesh31@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 22.74 KiB | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/venesh31/assignments
+   ecece37..f198fcf  master -> master
+Branch master set up to track remote branch master from origin.
+
+12.sachin@cricket:~/assignments$ git branch dev
+//creating the branch dev
+
+13.sachin@cricket:~/assignments$ git checkout dev
+//chechking into the branch dev
+M	Assignment_01_29_2017
+Switched to branch 'dev'
+
+14.sachin@cricket:~/assignments$ git diff HEAD
+diff --git a/Assignment_01_29_2017 b/Assignment_01_29_2017
+index 1c21fdb..3438f3d 100644
+--- a/Assignment_01_29_2017
++++ b/Assignment_01_29_2017
+@@ -91,5 +91,27 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+ To https://github.com/venesh31/assignments
+    8d61814..ecece37  master -> master
+ 
++11.sachin@cricket:~/assignments$ git push -u origin master
++Username for 'https://github.com': venesh31
++Password for 'https://venesh31@github.com': 
++Counting objects: 4, done.
++Delta compression using up to 4 threads.
++Compressing objects: 100% (4/4), done.
++Writing objects: 100% (4/4), 22.74 KiB | 0 bytes/s, done.
++Total 4 (delta 2), reused 0 (delta 0)
++remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
++To https://github.com/venesh31/assignments
++   ecece37..f198fcf  master -> master
++Branch master set up to track remote branch master from origin.
++
++12.sachin@cricket:~/assignments$ git branch dev
++
++13.sachin@cricket:~/assignments$ git checkout dev
++M      Assignment_01_29_2017
++Switched to branch 'dev'
++
++14.
++
++
+
+
 
  
 
