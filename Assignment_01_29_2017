@@ -7,9 +7,8 @@ Reinitialized existing Git repository in /home/sachin/assignments/.git/
 
 2.sachin@cricket:~/assignments$ git config --global user.name venesh31
 // configuring the git with our local repository
+
 3.sachin@cricket:~/assignments$ git config --global user.email veneshbathula@gmail.com
-
-
 
 4.sachin@cricket:~/assignments$ git log
 //shows the last commits
@@ -51,6 +50,7 @@ Binary files /dev/null and b/Assignment 1_25_2017.pdf differ
 
 
 6.sachin@cricket:~/assignments$ git clone https://github.com/venesh31/Mytest1git 
+//cloning the repository
 Cloning into 'Mytest1'...
 remote: Counting objects: 13, done.
 remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 13
@@ -99,6 +99,7 @@ To https://github.com/venesh31/assignments
    8d61814..ecece37  master -> master
 
 11.sachin@cricket:~/assignments$ git push -u origin master
+
 Username for 'https://github.com': venesh31
 Password for 'https://venesh31@github.com': 
 Counting objects: 4, done.
@@ -120,6 +121,7 @@ M	Assignment_01_29_2017
 Switched to branch 'dev'
 
 14.sachin@cricket:~/assignments$ git diff HEAD
+//it shows the difference between working directory and last commit
 diff --git a/Assignment_01_29_2017 b/Assignment_01_29_2017
 index 1c21fdb..3438f3d 100644
 --- a/Assignment_01_29_2017
@@ -127,31 +129,79 @@ index 1c21fdb..3438f3d 100644
 @@ -91,5 +91,27 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
  To https://github.com/venesh31/assignments
     8d61814..ecece37  master -> master
- 
-+11.sachin@cricket:~/assignments$ git push -u origin master
-+Username for 'https://github.com': venesh31
-+Password for 'https://venesh31@github.com': 
-+Counting objects: 4, done.
-+Delta compression using up to 4 threads.
-+Compressing objects: 100% (4/4), done.
-+Writing objects: 100% (4/4), 22.74 KiB | 0 bytes/s, done.
-+Total 4 (delta 2), reused 0 (delta 0)
-+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-+To https://github.com/venesh31/assignments
-+   ecece37..f198fcf  master -> master
-+Branch master set up to track remote branch master from origin.
-+
-+12.sachin@cricket:~/assignments$ git branch dev
-+
-+13.sachin@cricket:~/assignments$ git checkout dev
-+M      Assignment_01_29_2017
-+Switched to branch 'dev'
-+
-+14.
-+
-+
 
 
 
  
+15.sachin@cricket:~/assignments$ git push -u origin master
+Username for 'https://github.com': venesh31
+Password for 'https://venesh31@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 22.74 KiB | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/venesh31/assignments
+   ecece37..f198fcf  master -> master
+Branch master set up to track remote branch master from origin.
 
+16.sachin@cricket:~/assignments$ git branch dev
+//creating new branch dev
+
+17.sachin@cricket:~/assignments$ git checkout dev
+M      Assignment_01_29_2017
+Switched to branch 'dev'
+//switched to checkout branch
+
+18.sachin@cricket:~/assignments$ git merge devs
+//merge the file from dev  to master , as we are in master
+
+Updating f198fcf..9261204
+Fast-forward
+ Assignment_01_29_2017 | 68 ++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed,a 65 insertions(+), 3 deletions(-)
+
+
+19.sachin@cricket:~$ mkdir central
+//creating a folder for bare repo
+
+20.sachin@cricket:~/central$ git init --bare 
+// initializing bare repo 
+
+21.ssachin@cricket:~/assignments$ git clone ~/central/ .
+fatal: destination path '.' already exists and is not an empty directory.
+achin@cricket:~/central$ ls
+//bare repo is created with following files
+branches  config  description  HEAD  hooks  info  objects  refs
+
+22.sachin@cricket:~/assignments$ git clone ~/central/
+Cloning into 'central'...
+done.
+
+// master clones the bare repo
+
+
+24.sachin@cricket:~/assignments$ touch sachin
+// creating  a file
+
+
+25.sachin@cricket:~/assignments$ git add sachin
+//adding sachin
+
+28.sachin@cricket:~/assignments$ git commit -m "file"
+[master 38dcd02] file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 sachin
+//commiting sachin
+
+29.sachin@cricket:~/assignments$ git push ~/central master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 257 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To /home/sachin/central
+   9261204..38dcd02  master -> master
+//here we push to central 
+ 
